@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamflix</title>
+  <!-- Liga o arquivo de estilo (CSS) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO: logo, menu e busca -->
+  <header>
+    <h1 class="logo">STREAMFLIX</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha lista</a>
+    </nav>
+    <input type="text" id="busca" placeholder="Buscar título ou gênero">
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section id="banner">
+    <div class="banner-texto">
+      <h2 id="banner-titulo"></h2>
+      <p id="banner-descricao"></p>
+      <button class="botao branco" id="banner-assistir">▶ Assistir</button>
+      <button class="botao cinza" id="banner-info">Mais informações</button>
+    </div>
+  </section>
+
+  <!-- ÁREA ONDE O JAVASCRIPT COLOCA AS LINHAS DE FILMES -->
+  <main id="linhas"></main>
+
+  <!-- ÁREA DOS RESULTADOS DA BUSCA (começa escondida) -->
+  <main id="resultados" class="escondido"></main>
+
+  <!-- JANELA (MODAL) COM OS DETALHES DO FILME -->
+  <div id="modal" class="escondido">
+    <div class="modal-caixa">
+      <button id="modal-fechar">X</button>
+      <div id="modal-capa"></div>
+      <div class="modal-info">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-detalhes"></p>
+        <p id="modal-descricao"></p>
+        <button class="botao branco" id="modal-assistir">▶ Assistir</button>
+        <button class="botao cinza" id="modal-lista">+ Minha lista</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Liga o arquivo de JavaScript (fica no final do body) -->
+  <script src="script.js"></script>
+</body>
+</html>
